@@ -1,0 +1,62 @@
+{
+  "name": "react-dropzone-styled",
+  "version": "0.0.1",
+  "description": "A react-dropzone clone that comes with styles included",
+  "main": "dist/index.js",
+  "module": "dist/es/index.js",
+  "repository": "https://github.com/RedTurtle/react-dropzone-styled",
+  "bugs": "https://github.com/RedTurtle/react-dropzone-styled/issues",
+  "author": "Piero Nicolli",
+  "license": "MIT",
+  "keywords": ["react-component", "react", "drag", "drop", "upload", "dropzone"],
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "npm run clean && npm run build:umd && npm run build:es",
+    "build:umd": "cross-env NODE_ENV=production webpack -p --env production",
+    "build:es": "cross-env BABEL_ENV=es babel ./src --out-dir ./dist/es && cp ./src/styles.css ./dist/es/",
+    "start": "styleguidist server",
+    "styleguide": "styleguidist build",
+    "eslint:src": "eslint ./src ./*.js"
+  },
+  "dependencies": {
+    "react-dropzone": "^4.2.7",
+    "react-icons": "^2.2.7"
+  },
+  "devDependencies": {
+    "@redturtle/eslint-config": "^1.2.0",
+    "autoprefixer": "^7.2.5",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.1.3",
+    "css-loader": "^0.28.9",
+    "eslint": "^4.16.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-flowtype": "^2.41.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.5.0",
+    "eslint-plugin-react": "^7.5.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "postcss-flexbugs-fixes": "^3.3.0",
+    "postcss-loader": "^2.0.10",
+    "prettier": "^1.10.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-styleguidist": "^6.2.0",
+    "rimraf": "^2.6.2",
+    "style-loader": "^0.19.1",
+    "stylelint": "^8.4.0",
+    "stylelint-config-prettier": "^2.0.0",
+    "stylelint-config-recommended": "^2.0.1",
+    "webpack": "^3.10.0"
+  },
+  "peerDependencies": {
+    "react": ">=0.14.0"
+  }
+}
