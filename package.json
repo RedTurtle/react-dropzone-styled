@@ -1,6 +1,6 @@
 {
   "name": "react-dropzone-styled",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A react-dropzone clone that comes with styles included",
   "main": "dist/index.js",
   "module": "dist/es/index.js",
@@ -8,7 +8,14 @@
   "bugs": "https://github.com/RedTurtle/react-dropzone-styled/issues",
   "author": "Piero Nicolli",
   "license": "MIT",
-  "keywords": ["react-component", "react", "drag", "drop", "upload", "dropzone"],
+  "keywords": [
+    "react-component",
+    "react",
+    "drag",
+    "drop",
+    "upload",
+    "dropzone"
+  ],
   "scripts": {
     "clean": "rimraf ./dist",
     "build": "npm run clean && npm run build:umd && npm run build:es",
